@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.header-container {
+    border-bottom: 2px solid black;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ideas</title>
+</head>
+<body style="background-color: lightgray;">
+
+    <header>
+        <img src="../media/Greenhouse Busters.jpg" alt="Greenhouse Busters Logo" width="235" height="215">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="ideal.html">Your Ideas</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+  <main>
+        <section id="your-ideas">
+            <h2>Can Your Ideas Change the World?</h2>
+            <p>The aim of this page is giving solutions through suggesting whatever possible actions the users and communities could take that might minimize the emission of the greenhouse gases. Your suggestions may range from the promotion of energy saving, the utilization of the eco-friendly transport means, waste reduction, and earth-friendly actions.</p>
+
+            <form action="/submit-idea" method="post">
+                <label for="idea-title">Idea Title:</label><br>
+                <input type="text" id="idea-title" name="idea-title" required><br><br>
+                
+                <label for="idea-description">Your Idea:</label><br>
+                <textarea id="idea-description" name="idea-description" rows="10" cols="50" required></textarea><br><br>
+                
+                <input type="submit" value="Submit Idea">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
