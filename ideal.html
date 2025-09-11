@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-.header-container {
-    border-bottom: 2px solid black;
-}
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Ideas</title>
+    <link rel="stylesheet" type="text/css" href="ideal.css">
+    <link rel="icon" type="image/png" href="../media/favicon.png">
 </head>
-<body style="background-color: lightgray;">
-
+<body>
     <header>
-        <img src="Greenhouse Busters.jpg" alt="Greenhouse Busters Logo" width="235" height="215">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="ideal.html">Your Ideas</a></li>
-            </ul>
-        </nav>
+        <div class="Heads">
+            <img src="../media/Greenhouse Busters.jpg" alt="Greenhouse Busters Logo" width="235" height="215">
+        </div>
+        <div id="pass" >
+            <a href="index.html" class="grow">Home</a>
+            <a href="about.html" class="grow">About Me</a>
+            <a href="ideal.html" class="grow">Your Ideas</a>
+        </div>
     </header>
-  
-  <main>
-        <section id="your-ideas">
-            <h2>Can Your Ideas Change the World?</h2>
-            <p>The aim of this page is giving solutions through suggesting whatever possible actions the users and communities could take that might minimize the emission of the greenhouse gases. Your suggestions may range from the promotion of energy saving, the utilization of the eco-friendly transport means, waste reduction, and earth-friendly actions.</p>
+    
+    <main>
+        <div class="clearfix">
+            <section id="your-ideas">
+                <h2>Can Your Ideas Change the WORLD?</h2>
+                <p>With regard to the above aim of providing solutions by providing any possible steps the users and societies may follow that will help to reduce emission of the greenhouse gases, your suggestions may include anything from promoting energy saving, use of the environment-friendly means of transportation, reducing waste, and earth-friendly measures.</p>
 
-            <form action="/submit-idea" method="post">
-                <label for="idea-title">Idea Title:</label><br>
-                <input type="text" id="idea-title" name="idea-title" required><br><br>
-                
-                <label for="idea-description">Your Idea:</label><br>
-                <textarea id="idea-description" name="idea-description" rows="10" cols="50" required></textarea><br><br>
-                
-                <input type="submit" value="Submit Idea">
-            </form>
-        </section>
+                <form id="ideaForm">
+                    <label for="idea-title">Idea Title:</label><br>
+                    <input type="text" id="idea-title" name="idea-title" required><br><br>
+                    
+                    <label for="idea-description">Your Idea:</label><br>
+                    <textarea id="idea-description" name="idea-description" rows="10" cols="50" required></textarea><br><br>
+                    
+                    <input type="submit" value="Submit Idea">
+                </form>
+            </section>
+        </div>
     </main>
-</body>
+    <script>
+        document.getElementById('ideaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
+            // Get the form data
+            const ideaTitle = document.getElementById('idea-title').value;
+            const ideaDescription = document.getElementById('idea-description').value;
+
+            // Save the data to local storage
+            localStorage.setItem('submittedTitle', ideaTitle);
+            localStorage.setItem('submittedDescription', ideaDescription);
+
+            // Redirect to the success page
+            window.location.href = 'success.html';
+        });
+    </script>
+</body>
 </html>
