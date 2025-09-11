@@ -1,0 +1,27 @@
+        body {
+            background-color: lightgray;
+            font-family: Cambria, Cochin, Georgia, Arial, Helvetica, sans-serif;
+        }
+        .Heads {
+            overflow: auto;
+            border-bottom: 5px solid black;
+        }
+        .Heads img {
+            float: left;
+            margin-right: 15px;
+        }    
+        .Heads h1 {
+            float: left;
+        }    
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        #pass{
+            background-color: aqua;
+            padding: 20px;
+        }
+        .grow{
+            margin: 10px;
+        }
