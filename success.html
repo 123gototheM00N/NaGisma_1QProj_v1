@@ -16,14 +16,16 @@
     <a href="ideal.html">Submit another idea</a>
 
     <script>
-        // Retrieve the data from local storage
         const submittedTitle = localStorage.getItem('submittedTitle');
         const submittedDescription = localStorage.getItem('submittedDescription');
 
-        // Display the data on the page
         document.getElementById('display-title').textContent = submittedTitle;
         document.getElementById('display-description').textContent = submittedDescription;
+
+        localStorage.removeItem('submittedTitle');
+        localStorage.removeItem('submittedDescription');
     </script>
 </body>
 
 </html>
+
